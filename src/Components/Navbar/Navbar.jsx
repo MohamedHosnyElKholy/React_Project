@@ -106,7 +106,7 @@ export default function Navbar() {
         {/* For mobile view */}
         <div
           id="navbar-sticky"
-          className="md:hidden flex flex-col items-center mt-4 hidden"
+          className="md:hidden flex flex-col items-center mt-4"
         >
           {userLogin != null && (
             <ul className="flex flex-col gap-2">

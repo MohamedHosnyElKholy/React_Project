@@ -40,13 +40,13 @@ export default function WishList() {
     <>
       <h1 className="text-3xl font-bold mb-6 text-center my-5">My Wish List</h1>
       {datauser?.length > 0 ? (
-        <div className="space-y-4 w-[95%] mx-auto">
+        <div className="space-y-4 w-full max-w-4xl mx-auto px-4 sm:px-6">
           {datauser.map((el) => (
             <div
-              className="flex flex-wrap justify-between items-center p-4 bg-white shadow-lg rounded-lg border-b border-gray-300"
+              className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 bg-white shadow-lg rounded-lg border-b border-gray-300"
               key={el.id}
             >
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex items-start gap-4">
                 <img
                   src={el.imageCover}
                   className="w-24 h-24 object-cover rounded-md"
@@ -65,9 +65,9 @@ export default function WishList() {
               </div>
               <button
                 onClick={() => addItemCart(el.id)}
-                className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                className="mt-4 sm:mt-0 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
               >
-                {load && loadid == el.id ? (
+                {load && loadid === el.id ? (
                   <i className="fas fa-spinner fa-spin"></i>
                 ) : (
                   "Add To Cart"
