@@ -16,7 +16,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import CartContextPorvider from "./Contexet/CartContext";
 import { Toaster } from "react-hot-toast";
 import Checkout from "./Components/Checkout/Checkout";
-import Allorders from "./Components/Allorders/Allorders";
 import WishList from "./Components/WishList/WishList";
 import ForgetPassword from "./Components/ForgetPassword/ForgetPassword";
 import Verity from "./Components/Verity/Verity";
@@ -83,14 +82,6 @@ let route = createHashRouter([
         element: (
           <ProtectedRouter>
             <Checkout />
-          </ProtectedRouter>
-        ),
-      },
-      {
-        path: "allorders",
-        element: (
-          <ProtectedRouter>
-            <Allorders />
           </ProtectedRouter>
         ),
       },
