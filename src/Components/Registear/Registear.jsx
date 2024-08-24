@@ -22,7 +22,7 @@ export default function Registear() {
         if (reponse.data.message == "success") {
           localStorage.setItem("useToken", reponse.data.token);
           setuserLogin(reponse.data.token);
-          navigate("/");
+          navigate("/login");
         }
       })
       .catch((response) => {
@@ -200,3 +200,5 @@ export default function Registear() {
     </>
   );
 }
+
+// T8@vQ3rR
